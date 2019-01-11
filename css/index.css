@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -66,9 +66,54 @@ p {
     line-height: 1.4;
 }
 
+/* header */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: white;
+}
+
+.logo {
+    width: 30%;
+    text-align: left;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+header nav {
+    width: 70%;
+    padding: 20px 0;
+    
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+header nav ul li {
+    align-self: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 20px 20px;
+}
+
+/* end header */
 .container {
     width: 800px;
     margin: 0 auto;
+    background-color: white;
 }
 
 .top-content {
@@ -78,6 +123,11 @@ p {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
+
+.top-image {
+    margin-bottom: 50px; 
+} 
+
 
 .top-content .text-container {
     width: 48%;
@@ -111,6 +161,47 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+.middle-content .boxes .box:nth-child(1) {
+    background-color: teal;
+}
+
+.middle-content .boxes .box:nth-child(2) {
+    background-color: gold;
+}
+
+.middle-content .boxes .box:nth-child(3) {
+    background-color: cadetblue;
+}
+
+.middle-content .boxes .box:nth-child(4) {
+    background-color: coral;
+}
+
+.middle-content .boxes .box:nth-child(5) {
+    background-color: crimson;
+}
+
+.middle-content .boxes .box:nth-child(6) {
+    background-color: forestgreen;
+}
+
+.middle-content .boxes .box:nth-child(7) {
+    background-color: darkorchid;
+}
+
+.middle-content .boxes .box:nth-child(8) {
+    background-color: hotpink;
+}
+
+.middle-content .boxes .box:nth-child(9) {
+    background-color: indigo;
+}
+
+.middle-content .boxes .box:nth-child(10) {
+    background-color: dodgerblue;
+}
+
 
 .bottom-content {
     display: flex;
