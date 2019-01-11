@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    background-color: #202020;
 }
 ol, ul {
 	list-style: none;
@@ -113,6 +114,7 @@ header nav ul li a {
 .container {
     width: 800px;
     margin: 0 auto;
+    padding: 0 10px;
     background-color: white;
 }
 
@@ -144,6 +146,56 @@ header nav ul li a {
     padding: 0 2%;
     margin-bottom: 0;
 }
+
+/* top content contact */
+
+.top-content-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;
+    background-image: url(../img/los-angeles.jpg); /* fallback for older browsers */
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%), url(../img/los-angeles.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
+}
+
+.stretch-animation {
+    display: inline;
+    margin: 0;
+    padding: 150px 0;
+    border: 0;
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.stretch-animation:before {
+    content: 'Stretch';
+    -webkit-animation-name: stretch-animation;
+    -webkit-animation-duration: 3s;
+    animation-name: stretch-animation;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes stretch-animation {
+    0% {
+        content: 'Stretch';
+    }
+    50% {
+        content: 'Problems';
+    }
+    100% {
+        content: 'Completed!!';
+    }
+}
+
 
 /* about top container */
 
@@ -247,6 +299,7 @@ header nav ul li a {
 .about-boxes img {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .about-content button {
@@ -266,6 +319,84 @@ header nav ul li a {
 
 /* end about content */
 
+/* contact content */
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px dashed black;
+    padding-bottom: 20px; 
+}
+
+.box-contact {
+    width: 50%;
+}
+
+.box-contact h2 {
+    margin: 20px 0;
+}
+
+.box-contact form {
+	width: 100%;
+	
+}
+
+.box-contact form label {
+	width: 100%;
+	display: block;
+}
+
+.box-contact form input {
+	width: 100%;
+	display: block;
+	margin: 20px 0;
+	padding: 5px 10px;
+	border: 1px solid #636363;
+	
+}
+
+.box-contact form textarea {
+	width: 100%;
+	height: 150px;
+	display: block;
+	margin: 10px 0;
+	padding: 20px 10px;
+	border: 1px solid #636363;
+	
+}
+
+.form-button {
+	background-color: #afafaf;
+    border: 1px solid #636363;
+    cursor: pointer;
+}
+
+.box-contact-img {
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.box-contact-img img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+
+.container-contact-bottom {
+    width: 100%;
+    padding: 3% 1%;
+    padding-bottom: 20px;  
+}
+
+.container-contact-bottom h2 {
+    text-align: center;
+}
+
+
+/* end contact content */
+
 footer {
     width: 100%;
     background: black;
@@ -283,4 +414,90 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+
+@media all and (max-width: 600px) {
+
+p {
+    font-size: 1rem;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+}
+
+header nav {
+    width: 100%;
+
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 20px 20px;
+}
+
+header nav ul li a:hover {
+    background-color: #636363;
+}
+
+
+.box-contact {
+    width: 100%;
+    padding: 20px;
+}
+
+.about-content {
+    flex-direction: column;
+}
+
+.about-boxes {
+    width: 100%;
+    padding: 20px;
+} 
+
+.about-boxes img {
+    width: 100%;
+}
+
+
+.top-content .text-container {
+    width: 100%;
+}
+
+.middle-content .boxes {
+    flex-direction: column;
+}
+
+.middle-content .boxes .box {
+    width: 13%;
+    margin: 10px auto;
+}
+
+.bottom-content {
+    flex-direction: column;
+}
+
+footer nav {
+    width: 100%;
+    flex-direction: column;
+}
+
+
 }
